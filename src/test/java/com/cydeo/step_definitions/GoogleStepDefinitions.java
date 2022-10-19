@@ -22,7 +22,7 @@ public class GoogleStepDefinitions {
         googleSearchPage.seacrhBox.sendKeys(searchKey + Keys.ENTER);
     }
 
-    @Then("user should see title is {string}")
+    @Then("user should see title contains {string}")
     public void userShouldSeeTitleIs(String searchKey) {
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(searchKey));
